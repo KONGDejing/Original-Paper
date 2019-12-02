@@ -1,0 +1,20 @@
+module collect_module
+(
+       CLK,RSTn,
+		 VSYNC_Sig,HREF_Sig,
+
+)
+input CLK;
+input RSTn;
+output VSYNC_Sig;
+output HREF_Sig;
+
+/**********************************/
+reg [8:0]VSYNC_Count;
+always @ (posedge CLK or negedge RSTn)
+(
+       if(!RSTn)
+
+
+)
+/**********************************/

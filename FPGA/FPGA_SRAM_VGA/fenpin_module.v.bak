@@ -1,0 +1,12 @@
+module fenpin_module 
+(
+    input CLK;
+	 input RSTn;
+	 
+	 output CLK1;
+);
+
+always @(posedge CLK or negedge RSTn)
+    CLK1=~CLK1;
+	 
+endmodule

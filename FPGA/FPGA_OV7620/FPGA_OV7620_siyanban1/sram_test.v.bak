@@ -1,0 +1,46 @@
+module sram_test
+(
+     input CLK,
+	  input RSTn,
+	  output SRAM_WE,
+	  output SRAM_CE,
+	  output SRAM_OE,
+	  output SRAM_LB,
+	  output SRAM_UB,
+	  output [17:0]SramAddr,
+	  inout [15:0]SramData,
+	  output Led
+
+);
+reg [25:0]Count;
+reg SRAM_CER;
+reg SRAM_OER;
+reg SRAM_LBR;
+reg SRAM_UBR;
+always @(posedge CLK or negedge RSTn)
+     if(!RSTn)
+	      begin
+	      Count<=26'd0;
+			SRAM_CER<=1'b1;
+			SRAM_OER<=1'b1;
+			SRAM_LBR<=1'b1;
+			SRAM_UBR<=1'b1;
+			end
+	  else
+	      begin
+	      Count<=Count+1'b1;
+			SRAM_CER<=1'b0;
+			SRAM_OER<=1'b0;
+			SRAM_LBR<=1'b0;
+			SRAM_UBR<=1'b0;
+			end
+/*************************************************/
+
+always @(posedge CLK or negedge RSTn )
+   if(!RSTn)
+	
+			
+
+
+
+endmodule 

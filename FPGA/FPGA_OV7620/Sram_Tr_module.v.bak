@@ -1,0 +1,14 @@
+module Sram_Tr_module
+(
+       CLK,RSTn,
+		 SramWrEn,SramRdEn,SramCeEn,SramLbEn,
+
+
+
+)
+
+
+
+
+
+endmodule 

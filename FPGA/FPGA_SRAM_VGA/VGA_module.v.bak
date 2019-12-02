@@ -1,0 +1,44 @@
+module VGA_module
+(
+    input CLK,     //150M
+	 input RSTn,
+ 
+	 output HSYNC,
+    output VSYNC,
+	 output [2:0]RGB_Sig
+);
+/*******************VGAÍ¬²½****************************/
+
+reg [9:0]C1;
+reg [9:0]C2;
+reg rH,rV;
+reg sram_ce_r; 
+	 always @ ( posedge CLK or negedge RSTn )
+	     if( !RSTn )
+		      begin
+				    C1 <= 10'd0;
+					 C2 <= 10'd0;
+					 rH <= 1'b1;
+					 rV <= 1'b1;
+					 sram_ce_r<=1'b1;
+				end
+		  else 
+		      begin
+				    
+					 if( C1 == 800) rH <= 1'b0; 
+				     else if( C1 == 96 ) rH <= 1'b1;
+				     //else if( C1 == 0 ) rH <= 1'b0;
+					 
+					 if( C2 == 525 ) rV <= 1'b0;
+					 else if( C2 == 2  ) rV <= 1'b1;
+					 //else if( C2 == 0 ) rV <= 1'b0;
+					 
+					 if( C2 == 525 ) C2 <= 10'd1;
+					 else if( C1 == 800 ) C2 <= C2 + 1'b1;
+					 
+				     if( C1 == 800 ) C1 <= 11'd1;
+					 else if(count%5==0)C1 <= C1 + 1'b1;				 
+					 
+				end
+assign HSYNC = rH;
+assign VSYNC = rV;

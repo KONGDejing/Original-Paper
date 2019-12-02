@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="_OV7620">
+		<CBX_INST_ENTRY INSTANCE_NAME="|_OV7620_sram_test_fangxin|PLL:inst|altpll:altpll_component" CBX_FILE_NAME="PLL_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

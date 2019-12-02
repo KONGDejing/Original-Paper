@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at sram_test_fangxin.v(72): object "ADDR_R" differs only in case from object "addr_r" in the same scope
+Warning (10268): Verilog HDL information at fenpin_module.v(9): always construct contains both blocking and non-blocking assignments

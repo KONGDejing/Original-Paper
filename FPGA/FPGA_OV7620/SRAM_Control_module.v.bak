@@ -1,0 +1,8 @@
+module SRAM_Control_module
+(
+       CLK,RSTn,
+       SRAM_WE,SRAM_CE,SRAM_OE,SRAM_LB,SRAM_UB
+
+
+
+);

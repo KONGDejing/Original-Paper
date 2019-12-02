@@ -1,0 +1,9 @@
+module Sram_Re_module
+(
+       CLK,RSTn,
+
+		 SramWrEn,SramOeEn,SramCsEn,SramLbEn,SramUbEn,
+
+
+
+);

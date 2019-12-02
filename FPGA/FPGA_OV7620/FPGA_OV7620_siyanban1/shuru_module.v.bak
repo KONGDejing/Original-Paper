@@ -1,0 +1,14 @@
+module shuru_module
+(
+     input clk;
+	  input rst;
+     output sw1;
+	  output sw2;
+
+);
+
+
+
+
+
+endmodule 

@@ -1,0 +1,116 @@
+`timescale 1ns/1ps
+module sram_test_fangxin
+(
+    input CLK,     //50M
+	 input RSTn,
+	 
+	 output led,
+	 output[17:0]sram_addr,
+	 output sram_wr_n,
+	 
+	 inout[7:0]sram_data
+);
+/**************—” ±***********************/
+reg [25:0]delay;
+
+always @(posedge CLK or negedge RSTn)
+      if(!RSTn)
+		   delay<=26'd0;
+		else 
+		   delay<=delay+1'b1;
+/*************************************/
+
+reg [7:0]wr_data;
+reg [7:0]rd_data;
+reg [17:0]addr_r;
+
+wire sram_wr_req;
+wire sram_rd_req;
+reg led_r;
+
+assign sram_wr_req=(delay==26'd9999);
+assign sram_rd_req=(delay==26'd19999);
+
+always @(posedge CLK or negedge RSTn)
+     if(!RSTn)begin wr_data<=8'd0;addr_r<=18'd0;end	    
+	  else if(delay==26'd29999) begin wr_data<=wr_data+1'b1;addr_r<=addr_r+1'b1; end
+	  
+assign sram_addr=addr_r;
+
+//------------------------------------------------
+	  
+always @(posedge CLK or negedge RSTn)
+     if(!RSTn)led_r<=1'd0;
+	  else if(delay==26'd20099)
+	      begin
+			    if(wr_data==rd_data)led_r<=1'b1;
+				 else led_r<=1'b0;
+			end
+assign led=led_r;
+
+//-------------------------------------------------
+
+`define DELAY_20NS    (cnt==3'd1)
+reg [2:0]cnt;
+
+always @(posedge CLK or negedge RSTn)
+     if(!RSTn) cnt<=3'd0;
+     else if(cstate==IDLE)cnt<=3'd0;
+	  else cnt<=cnt+1'b1;
+//-------------------------------------------------
+
+parameter IDLE =4'd0,
+          WRT0 =4'd1,
+			 WRT1 =4'd2,
+			 REA0 =4'd3,
+			 REA1 =4'd4;
+reg [3:0]cstate,nstate;
+
+always @(posedge CLK or negedge RSTn)
+    if(!RSTn)cstate<=IDLE;
+	 else cstate<=nstate;
+	 
+always @(cstate or sram_wr_req or sram_rd_req or cnt)
+    case(cstate)
+	      IDLE: if(sram_wr_req)nstate<=WRT0;
+			      else if(sram_rd_req)nstate<=REA0;
+					else nstate<=IDLE;
+			WRT0: if(`DELAY_20NS) nstate<=WRT1;
+			      else nstate<=WRT0;
+			WRT1: nstate<=IDLE;
+			REA0: if(`DELAY_20NS) nstate<=REA1;
+			      else nstate<=REA0;
+			REA1: nstate<=IDLE;
+		default: nstate<=IDLE;
+	endcase
+			 
+//------------------------------------------------
+
+
+reg sdlink;
+
+always @(posedge CLK or negedge RSTn)
+    if(!RSTn)rd_data<=8'd0;
+    else if(cstate==REA1)rd_data<=sram_data;	
+	
+always @(posedge CLK or negedge RSTn)
+    if(!RSTn)sdlink<=1'b0;
+	 else
+	    case(cstate)
+		     IDLE: if(sram_wr_req)sdlink <=1'b1;
+			        else if(sram_rd_req)sdlink<=1'b0;
+					  else sdlink<=1'b0;
+			  WRT0: sdlink<=1'b1;
+			  default: sdlink<=1'b0;
+			  endcase
+			  
+assign sram_data = sdlink ? wr_data : 8'hzz;
+assign sram_wr_n = ~sdlink;
+
+//-------------------------------------------------			  
+          	  
+
+
+endmodule
+
+

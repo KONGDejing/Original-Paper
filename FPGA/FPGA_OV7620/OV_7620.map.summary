@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Feb 26 16:44:59 2014
+Quartus II Version : 11.0 Build 208 07/03/2011 SP 1 SJ Full Version
+Revision Name : OV_7620
+Top-level Entity Name : OV_7620_BDF
+Family : Cyclone IV E
+Total logic elements : 354
+    Total combinational functions : 344
+    Dedicated logic registers : 104
+Total registers : 104
+Total pins : 49
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

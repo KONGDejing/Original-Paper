@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="SRAM">
+		<CBX_INST_ENTRY INSTANCE_NAME="|SRAM_fangxin_LED_test|PLL_150M:inst2|altpll:altpll_component" CBX_FILE_NAME="PLL_150M_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

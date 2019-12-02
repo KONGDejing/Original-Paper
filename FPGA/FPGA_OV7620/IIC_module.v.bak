@@ -1,0 +1,5 @@
+module IIC_module
+(
+       CLK,RSTn,
+		 SCL,
+)

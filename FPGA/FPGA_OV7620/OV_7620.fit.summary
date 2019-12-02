@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Feb 26 16:45:08 2014
+Quartus II Version : 11.0 Build 208 07/03/2011 SP 1 SJ Full Version
+Revision Name : OV_7620
+Top-level Entity Name : OV_7620_BDF
+Family : Cyclone IV E
+Device : EP4CE15F17C8
+Timing Models : Final
+Total logic elements : 347 / 15,408 ( 2 % )
+    Total combinational functions : 345 / 15,408 ( 2 % )
+    Dedicated logic registers : 104 / 15,408 ( < 1 % )
+Total registers : 104
+Total pins : 49 / 166 ( 30 % )
+Total virtual pins : 0
+Total memory bits : 0 / 516,096 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

@@ -1,0 +1,8 @@
+
+State Machine - |SRAM_VGA_BDF|sram_test_fangxin:inst|cstate
+Name cstate.REA0 cstate.WRT1 cstate.WRT0 cstate.IDLE cstate.REA1 
+cstate.IDLE 0 0 0 0 0 
+cstate.WRT0 0 0 1 1 0 
+cstate.WRT1 0 1 0 1 0 
+cstate.REA0 1 0 0 1 0 
+cstate.REA1 0 0 0 1 1 

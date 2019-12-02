@@ -1,0 +1,161 @@
+|SRAM_fangxin_LED_test
+CLOCK => PLL_150M:inst2.inclk0
+RESET => sram_test_fangxin:inst.RSTn
+SRAM_DB[0] <> sram_test_fangxin:inst.sram_data[0]
+SRAM_DB[1] <> sram_test_fangxin:inst.sram_data[1]
+SRAM_DB[2] <> sram_test_fangxin:inst.sram_data[2]
+SRAM_DB[3] <> sram_test_fangxin:inst.sram_data[3]
+SRAM_DB[4] <> sram_test_fangxin:inst.sram_data[4]
+SRAM_DB[5] <> sram_test_fangxin:inst.sram_data[5]
+SRAM_DB[6] <> sram_test_fangxin:inst.sram_data[6]
+SRAM_DB[7] <> sram_test_fangxin:inst.sram_data[7]
+
+
+|SRAM_fangxin_LED_test|sram_test_fangxin:inst
+CLK => sdlink.CLK
+CLK => rd_data[0].CLK
+CLK => rd_data[1].CLK
+CLK => rd_data[2].CLK
+CLK => rd_data[3].CLK
+CLK => rd_data[4].CLK
+CLK => rd_data[5].CLK
+CLK => rd_data[6].CLK
+CLK => rd_data[7].CLK
+CLK => cnt[0].CLK
+CLK => cnt[1].CLK
+CLK => cnt[2].CLK
+CLK => led_r.CLK
+CLK => i[0].CLK
+CLK => i[1].CLK
+CLK => i[2].CLK
+CLK => i[3].CLK
+CLK => i[4].CLK
+CLK => addr_r[0].CLK
+CLK => addr_r[1].CLK
+CLK => addr_r[2].CLK
+CLK => addr_r[3].CLK
+CLK => addr_r[4].CLK
+CLK => addr_r[5].CLK
+CLK => addr_r[6].CLK
+CLK => addr_r[7].CLK
+CLK => addr_r[8].CLK
+CLK => addr_r[9].CLK
+CLK => addr_r[10].CLK
+CLK => addr_r[11].CLK
+CLK => addr_r[12].CLK
+CLK => addr_r[13].CLK
+CLK => addr_r[14].CLK
+CLK => addr_r[15].CLK
+CLK => addr_r[16].CLK
+CLK => addr_r[17].CLK
+CLK => wr_data[0].CLK
+CLK => wr_data[1].CLK
+CLK => wr_data[2].CLK
+CLK => wr_data[3].CLK
+CLK => wr_data[4].CLK
+CLK => wr_data[5].CLK
+CLK => wr_data[6].CLK
+CLK => wr_data[7].CLK
+CLK => sram_rd_req.CLK
+CLK => sram_wr_req.CLK
+CLK => cstate~1.DATAIN
+RSTn => led_r.ACLR
+RSTn => i[0].ACLR
+RSTn => i[1].ACLR
+RSTn => i[2].ACLR
+RSTn => i[3].ACLR
+RSTn => i[4].ACLR
+RSTn => addr_r[0].ACLR
+RSTn => addr_r[1].ACLR
+RSTn => addr_r[2].ACLR
+RSTn => addr_r[3].ACLR
+RSTn => addr_r[4].ACLR
+RSTn => addr_r[5].ACLR
+RSTn => addr_r[6].ACLR
+RSTn => addr_r[7].ACLR
+RSTn => addr_r[8].ACLR
+RSTn => addr_r[9].ACLR
+RSTn => addr_r[10].ACLR
+RSTn => addr_r[11].ACLR
+RSTn => addr_r[12].ACLR
+RSTn => addr_r[13].ACLR
+RSTn => addr_r[14].ACLR
+RSTn => addr_r[15].ACLR
+RSTn => addr_r[16].ACLR
+RSTn => addr_r[17].ACLR
+RSTn => wr_data[0].ACLR
+RSTn => wr_data[1].ACLR
+RSTn => wr_data[2].ACLR
+RSTn => wr_data[3].ACLR
+RSTn => wr_data[4].ACLR
+RSTn => wr_data[5].ACLR
+RSTn => wr_data[6].ACLR
+RSTn => wr_data[7].ACLR
+RSTn => sram_rd_req.ACLR
+RSTn => sram_wr_req.ACLR
+RSTn => cnt[0].ACLR
+RSTn => cnt[1].ACLR
+RSTn => cnt[2].ACLR
+RSTn => rd_data[0].ACLR
+RSTn => rd_data[1].ACLR
+RSTn => rd_data[2].ACLR
+RSTn => rd_data[3].ACLR
+RSTn => rd_data[4].ACLR
+RSTn => rd_data[5].ACLR
+RSTn => rd_data[6].ACLR
+RSTn => rd_data[7].ACLR
+RSTn => sdlink.ACLR
+RSTn => cstate~3.DATAIN
+sram_data[0] <> sram_data[0]
+sram_data[1] <> sram_data[1]
+sram_data[2] <> sram_data[2]
+sram_data[3] <> sram_data[3]
+sram_data[4] <> sram_data[4]
+sram_data[5] <> sram_data[5]
+sram_data[6] <> sram_data[6]
+sram_data[7] <> sram_data[7]
+
+
+|SRAM_fangxin_LED_test|PLL_150M:inst2
+inclk0 => sub_wire3[0].IN1
+
+
+|SRAM_fangxin_LED_test|PLL_150M:inst2|altpll:altpll_component
+inclk[0] => PLL_150M_altpll:auto_generated.inclk[0]
+inclk[1] => PLL_150M_altpll:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => ~NO_FANOUT~
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+
+
+|SRAM_fangxin_LED_test|PLL_150M:inst2|altpll:altpll_component|PLL_150M_altpll:auto_generated
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+
+
