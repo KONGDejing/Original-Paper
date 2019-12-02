@@ -1,5 +1,2 @@
-﻿原创文章链接：
-1.https://www.jianshu.com/u/4d1d6d01794b
-
 Arduino 开发，一小时上手
 一周开发defcon大会参赛胸卡
