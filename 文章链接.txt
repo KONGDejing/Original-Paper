@@ -1,5 +1,10 @@
 ﻿原创文章链接：
-1.https://www.jianshu.com/u/4d1d6d01794b
+简书 1.https://www.jianshu.com/u/4d1d6d01794b
+论文：
+1.https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&dbname=CMFD201602&filename=1016721161.nh&v=MTIyNjZZUzdEaDFUM3FUcldNMUZyQ1VSTE9lWmVabkZ5RGtXcjdJVkYyNkdMUzZIOURLcnBFYlBJUjhlWDFMdXg=
+
+2.https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2016&filename=ZGJX201604004&v=MjkzMjRSTE9lWmVabkZ5RGtXcnZNUHlyQmRyRzRIOWZNcTQ5RllJUjhlWDFMdXhZUzdEaDFUM3FUcldNMUZyQ1U=
+
 
 Arduino 开发，一小时上手
 一周开发defcon大会参赛胸卡
