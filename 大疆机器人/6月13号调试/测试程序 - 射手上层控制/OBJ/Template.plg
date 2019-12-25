@@ -1,0 +1,49 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Administrator\Desktop\6月13号调试\测试程序 - 射手上层控制\USER\Template.uvproj
+Project File Date:  04/29/2015
+
+<h2>Output:</h2>
+Build target 'Template'
+compiling BSP.c...
+linking...
+Program Size: Code=18812 RO-data=336 RW-data=172 ZI-data=1924  
+FromELF: creating hex file...
+"..\OBJ\Template.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\OBJ\\Template.AXF" 
+* JLink Info: Device "STM32F103ZE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "C:\Users\Administrator\Desktop\6月13号调试\测试程序 - 射手上层控制\USER\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.58a, compiled Dec  5 2012 18:38:08
+Firmware: J-Link V9 compiled Feb 20 2015 09:20:19
+Hardware: V9.20
+Feature(s) : GDB, RDI, FlashBP, FlashDL, JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103ZE
+VTarget = 3.322V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 0
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 6000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...

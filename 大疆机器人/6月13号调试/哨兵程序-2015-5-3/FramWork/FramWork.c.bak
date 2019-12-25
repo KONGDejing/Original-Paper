@@ -1,0 +1,37 @@
+#include "FramWork.h"
+#include "math.h"
+#include "BSP.h"
+
+MotorControlType MotorControl;
+
+extern RC_Ctl_t RC_Ctl; 
+
+s16 Vx,Vy,Vo,VxNow,VyNow,VoNow,VxOld,VyOld,VoOld;
+s16	VxNew=0,VyNew=0,VoNew=0;
+
+void DevelopmentFramwork(void)
+{
+   MotorControl.User_Kp = RM_Kp;	
+   MotorControl.User_Ki = RM_Ki;
+   MotorControl.User_Kd = RM_Kd;
+   MotorControl.Err_Lim = RM_Lim;
+
+	 Vx = (RC_Ctl.rc.ch2 - 1024)*1;
+	 Vy = (RC_Ctl.rc.ch3 - 1024)*1;
+	 Vo = (RC_Ctl.rc.ch0 - 1024)*1;
+
+	 MotorControl.MotorSpeedOne = -Vx+Vy-Vo;
+	 MotorControl.MotorSpeedTwo = -Vx-Vy-Vo;
+	 MotorControl.MotorSpeedThr =  Vx-Vy-Vo;
+	 MotorControl.MotorSpeedFou =  Vx+Vy-Vo;
+	
+}
+
+
+
+
+
+
+
+
+
